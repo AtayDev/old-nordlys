@@ -8,36 +8,36 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 const screenshots = [
   {
     id: 1,
-    title: "AI Action Agents",
-    description: "Specialized AI agents for every engineering task, from HAZID reports to equipment management.",
+    title: "Task-oriented AI Action Co-Engineers",
+    description: "Access a team of purpose-built AI systems, trained on defined engineering workflows to perform and aid with domain-specific tasks and documentation drafting.",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-03-15%20015939-RLmIZj7IhrTJB9ijzuIJ8liVxEYrFj.png",
-    features: ["Automated documentation", "Process safety analysis", "Equipment management", "Risk assessment"],
+      "action-1.png",
+    features: ["Task-Specific Reasoning", "Industry Best Practices", "Actionable Insights", "Enhanced Efficiency"],
   },
   {
     id: 2,
-    title: "Project Dashboard",
-    description: "Comprehensive overview of your engineering projects and AI co-engineers.",
+    title: "Smart Document Processing",
+    description: "Upload technical documentation and Solvi will transform your specific process data into a structured knowledge framework, providing itself with actionable context.",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-03-15%20015959-exAE65CfWgXqR72oCd0LXbrlVd1GM4.png",
-    features: ["Project tracking", "AI co-engineer collaboration", "Document management", "Progress monitoring"],
+      "action-2.png",
+    features: ["Easy Data Plugin", "Automatic Classification", "Smart Processing", "Project Integration"],
   },
   {
     id: 3,
-    title: "HAZID Analysis",
-    description: "Detailed hazard identification and analysis with intelligent processing.",
+    title: "Actionable Engineering Insights",
+    description: "From HAZID to Valve lists, see the results in front of your very eyes!",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-03-15%20010229-Nh4kSWGRPMats5rhQxSDxur689vnaK.png",
+      "action-3.png",
     features: [
-      "Comprehensive hazard analysis",
+      "Industry Grade Drafts",
       "Reference documentation",
-      "Process validation",
-      "Safety standards compliance",
+      "Assumptions & Limitations",
+      "Industry Standards Compliance",
     ],
   },
 ]
 
-export function WorkflowShowcaseKnowledge() {
+export function WorkflowShowcaseMiddle() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
   const intervalRef = useRef<NodeJS.Timeout | null>(null)

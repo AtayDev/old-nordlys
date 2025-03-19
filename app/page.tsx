@@ -10,6 +10,8 @@ import { Team } from "@/components/sections/team"
 import { Contact } from "@/components/sections/contact"
 import { WorkflowShowcase } from "@/components/sections/workflow-showcase"
 import { PremiumCta } from "@/components/sections/premium-cta"
+import { WorkflowShowcaseMiddle } from "@/components/sections/workflow-showcase-middle"
+import { WorkflowShowcaseLast } from "@/components/sections/workflow-showcase-last"
 
 export default function Home() {
   const [mounted, setMounted] = useState(false)
@@ -27,8 +29,8 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <WorkflowShowcase/>
-        <WorkflowShowcase/>
-        <WorkflowShowcase/>
+        <WorkflowShowcaseMiddle/>
+        <WorkflowShowcaseLast/>
         <PremiumCta />
       </main>
 

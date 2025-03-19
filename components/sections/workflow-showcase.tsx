@@ -8,31 +8,31 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 const screenshots = [
   {
     id: 1,
-    title: "AI Action Agents",
-    description: "Specialized AI agents for every engineering task, from HAZID reports to equipment management.",
+    title: "AI Knowledge Co-Engineers",
+    description: "Access a team of AI co-engineers, trained on high quality domain-specific data, each specializing in a critical chemical engineering sub-domain.",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-03-15%20015939-RLmIZj7IhrTJB9ijzuIJ8liVxEYrFj.png",
-    features: ["Automated documentation", "Process safety analysis", "Equipment management", "Risk assessment"],
+      "know-1.png",
+    features: ["Proprietary Reasoning Models", "Industry-Specific Expertise", "Engineering Logic Framework", "Curated Knowledge Base"],
   },
   {
     id: 2,
-    title: "Project Dashboard",
-    description: "Comprehensive overview of your engineering projects and AI co-engineers.",
+    title: "Streamlined Project Creation",
+    description: "Create projects in an integrated and Intuitive system setup for your engineering cases.",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-03-15%20015959-exAE65CfWgXqR72oCd0LXbrlVd1GM4.png",
-    features: ["Project tracking", "AI co-engineer collaboration", "Document management", "Progress monitoring"],
+      "know-2.png",
+    features: ["Project tracking", "Progress monitoring", "Resources and Document Control"],
   },
   {
     id: 3,
-    title: "HAZID Analysis",
-    description: "Detailed hazard identification and analysis with intelligent processing.",
+    title: "Hiring AI Specialized Co-Engineers",
+    description: "Hire the Co-Engineers that are most important for your engineering problem, or just to have the support of your project.",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-03-15%20010229-Nh4kSWGRPMats5rhQxSDxur689vnaK.png",
+      "know-3.png",
     features: [
-      "Comprehensive hazard analysis",
-      "Reference documentation",
-      "Process validation",
-      "Safety standards compliance",
+      "Reaction Kinetics Expert",
+      "Separation Processes Expert",
+      "Wells & Drilling Engineer",
+      "Safety & Risk Expert",
     ],
   },
 ]

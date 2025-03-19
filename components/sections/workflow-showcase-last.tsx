@@ -8,36 +8,35 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 const screenshots = [
   {
     id: 1,
-    title: "AI Action Agents",
-    description: "Specialized AI agents for every engineering task, from HAZID reports to equipment management.",
+    title: "Integrated Project Ecosystem",
+    description: "Experience a comprehensive overview of your engineering ecosystem in one unified view, providing instant access to projects, AI co-engineers, documents, and tasks.",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-03-15%20015939-RLmIZj7IhrTJB9ijzuIJ8liVxEYrFj.png",
-    features: ["Automated documentation", "Process safety analysis", "Equipment management", "Risk assessment"],
+      "ecosystem-1.png",
+    features: ["Real-time project status tracking", "Document management and version control", "Progress monitoring with intelligent metrics"],
   },
   {
     id: 2,
-    title: "Project Dashboard",
-    description: "Comprehensive overview of your engineering projects and AI co-engineers.",
+    title: "Intelligent Project Management",
+    description: "Navigate your engineering projects with clarity and precision. Detailed views display assigned experts, status updates, and relevant technical details.",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-03-15%20015959-exAE65CfWgXqR72oCd0LXbrlVd1GM4.png",
-    features: ["Project tracking", "AI co-engineer collaboration", "Document management", "Progress monitoring"],
+      "ecosystem-2.png",
+    features: ["Streamlined project access and navigation", "Integrated expert assignments and visibility", "Cross-disciplinary collaboration tracking"],
   },
   {
     id: 3,
-    title: "HAZID Analysis",
-    description: "Detailed hazard identification and analysis with intelligent processing.",
+    title: "Workflow+: Activity Tracking",
+    description: "Track progress and recent activity.",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-03-15%20010229-Nh4kSWGRPMats5rhQxSDxur689vnaK.png",
+      "ecosystem-3.png",
     features: [
-      "Comprehensive hazard analysis",
-      "Reference documentation",
-      "Process validation",
-      "Safety standards compliance",
+      "Centralized Task Tracking",
+      "Clear Timeline Visibility",
+      "Complete Task History"
     ],
   },
 ]
 
-export function WorkflowShowcaseAction() {
+export function WorkflowShowcaseLast() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
   const intervalRef = useRef<NodeJS.Timeout | null>(null)
