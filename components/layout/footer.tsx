@@ -11,21 +11,37 @@ export function Footer() {
               Precision-engineered AI solutions for the chemical and process engineering industry. We transform complex
               engineering challenges into streamlined, intelligent solutions.
             </p>
+            
           </div>
 
           <div>
             <h3 className="text-sm font-semibold text-neutral-900 mb-6">Navigation</h3>
             <ul className="space-y-4">
-              {["About", "Solutions", "Contact"].map((item) => (
-                <li key={item}>
+                <li key="1">
                   <Link
-                    href={`#${item.toLowerCase()}`}
+                    href="/about"
                     className="text-sm text-neutral-600 hover:text-neutral-900 transition-colors"
                   >
-                    {item}
+                    About
                   </Link>
                 </li>
-              ))}
+                <li key="2">
+                <Link
+                  href="/#Solutions"
+                  className="text-sm text-neutral-600 hover:text-neutral-900 transition-colors"
+                >
+                  Solutions
+                </Link>
+              </li>
+              <li key="3">
+              <Link
+                href="#premiumCta"
+                className="text-sm text-neutral-600 hover:text-neutral-900 transition-colors"
+              >
+                Contact
+              </Link>
+            </li>
+             
             </ul>
           </div>
 
@@ -44,6 +60,7 @@ export function Footer() {
 
         <div className="border-t border-neutral-100 mt-16 pt-8 text-center text-sm text-neutral-600">
           <p>&copy; {new Date().getFullYear()} Nordlys Tech. All rights reserved.</p>
+          
         </div>
       </div>
     </footer>

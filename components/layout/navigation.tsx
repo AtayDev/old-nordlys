@@ -10,8 +10,7 @@ export function Navigation() {
 
   const navItems = [
     { name: "About", href: "/about" },
-    { name: "Solutions", href: "#workflow" },
-    { name: "Contact", href: "#contact" },
+    { name: "Solutions", href: "/#workflow" },
   ]
 
   useEffect(() => {
@@ -45,7 +44,7 @@ export function Navigation() {
                 {item.name}
               </Link>
             ))}
-            <Link href="#contact" className="button-primary">
+            <Link href="#premiumCta" className="button-primary">
               Get in Touch
             </Link>
           </nav>

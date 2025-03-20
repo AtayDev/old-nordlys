@@ -1,42 +1,53 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState, useRef, useEffect } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
-import { Navigation } from "@/components/layout/navigation"
-import { Footer } from "@/components/layout/footer"
-import { ScrollReveal } from "@/components/ui/scroll-reveal"
-import { LaserFrame } from "@/components/ui/laser-frame"
-import { Contact } from "@/components/sections/contact"
-import { ArrowRight, ChevronDown, ChevronUp, Plus } from "lucide-react"
+import { useState, useRef, useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  AnimatePresence,
+} from "framer-motion";
+import { Navigation } from "@/components/layout/navigation";
+import { Footer } from "@/components/layout/footer";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { LaserFrame } from "@/components/ui/laser-frame";
+import { Contact } from "@/components/sections/contact";
+import { ArrowRight, ChevronDown, ChevronUp, Plus } from "lucide-react";
+import { PremiumCta } from "@/components/sections/premium-cta";
+
+const devDetails = "Our process began with extensive work including collecting and processing large volumes of high quality domain-specific data, developing proprietary reasoning models, collaboration, and more. We gathered continuous feedback to understand what new challenges emerged with each implementation working alongside industrial experts from relevant domains.\nThe concept was straightforward yet powerful: an expert-designed and expert-tested engine would deliver maximum value in specialized environments. Our goal is creating AI solutions that can be implemented in a specialized, safe, and accessible manner for chemical and process engineers.";
 
 // Journey data
 const journeySteps = [
   {
     id: "idea",
-    title: "Idea",
-    description: "Nordlys Tech was founded with a vision to transform chemical engineering with AI.",
+    title: "Idea - Create Value, Clear the Clutter",
+    description:
+      "Nordlys Tech was founded with a clear mission: to empower chemical and process engineers by eliminating the clutter that consumes their day.",
     details:
-      "Our team of four engineers came together with a shared vision of revolutionizing the chemical engineering industry through advanced AI solutions. With backgrounds in both engineering and AI, we identified a significant gap in the market for specialized tools that truly understand the complexities of chemical processes.",
+      "Our team, a blend of chemical engineering and computer science expertise, saw firsthand how the clutter of complex data, repetitive tasks, and fragmented workflows was holding back innovation. This is where the idea of Solvi emerged to bring AI-driven intelligence into every stage of the engineering workflow.",
   },
   {
     id: "development",
     title: "Development",
-    description: "Development of Solvi, our AI ecosystem for chemical and process engineers.",
+    description:
+      "Having found the root issues, we dedicated ourselves to developing Solvi over one year with strong scientific foundations.",
     details:
-      "We began developing Solvi, our flagship AI ecosystem designed specifically for chemical and process engineers. This involved extensive research, data collection, and collaboration with industry experts to ensure our solutions address real-world engineering challenges.",
+      "Our process began with extensive work including collecting and processing large volumes of high quality domain-specific data, developing proprietary reasoning models, collaboration, and more. We gathered continuous feedback to understand what new challenges emerged with each implementation working alongside industrial experts from relevant domains.\nThe concept was straightforward yet powerful: an expert-designed and expert-tested engine would deliver maximum value in specialized environments. Our goal is creating AI solutions that can be implemented in a specialized, safe, and accessible manner for chemical and process engineers.",
   },
   {
     id: "launch",
     title: "Launch",
-    description: "Official launch of Solvi, bringing specialized AI to engineering teams worldwide.",
+    description:
+      "Now we're here, with Solvi almost ready to launch in beta! Our platform will streamline key engineering workflows through intuitive AI Co-Engineering, eliminating repetitive tasks and unlocking new levels of efficiency.",
     details:
-      "The launch of Solvi marks a significant milestone in our journey. Our AI ecosystem is now helping engineering teams worldwide streamline their workflows, optimize processes, and make more informed decisions based on specialized knowledge and intelligent insights.",
+      "We can't wait to bring the power of Solvi to engineers all over the globe, transforming how technical teams collaborate, innovate, and solve complex problems in their daily work.",
   },
-]
+];
 
 // FAQ data
 const faqs = [
@@ -60,7 +71,7 @@ const faqs = [
     answer:
       "Our journey is guided by Mr. Olav Grønås Gjerde, one of the Co-Founders of boost.ai, a trailblazer in practical AI applications in Scandinavia. As our senior advisor and mentor, he helps ensure our solutions meet the highest standards of innovation and practicality.",
   },
-]
+];
 
 // Values data
 const values = [
@@ -84,88 +95,94 @@ const values = [
     description:
       "Working closely with engineers to solve real-world problems. We believe that the best solutions emerge from close collaboration between AI experts and domain specialists.",
   },
-]
+];
 
 const DecorativeElement = ({ className = "" }: { className?: string }) => (
   <div className={`absolute pointer-events-none ${className}`}>
-    <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="120"
+      height="120"
+      viewBox="0 0 120 120"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <circle cx="60" cy="60" r="30" stroke="black" strokeWidth="2" />
       <circle cx="60" cy="60" r="45" stroke="black" strokeWidth="2" />
       <circle cx="60" cy="60" r="60" stroke="black" strokeWidth="2" />
     </svg>
   </div>
-)
+);
 
 export default function AboutPage() {
-  const [expandedFaq, setExpandedFaq] = useState<number | null>(null)
-  const [activeStep, setActiveStep] = useState(0)
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true)
-  const [showContact, setShowContact] = useState(false)
-  const heroRef = useRef<HTMLDivElement>(null)
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
+  const [activeStep, setActiveStep] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [showContact, setShowContact] = useState(false);
+  const heroRef = useRef<HTMLDivElement>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,
     offset: ["start start", "end start"],
-  })
+  });
 
-  const y = useTransform(scrollYProgress, [0, 1], [0, 200])
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
+  const y = useTransform(scrollYProgress, [0, 1], [0, 200]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   // Interactive elements
-  const [activeValue, setActiveValue] = useState<number | null>(null)
+  const [activeValue, setActiveValue] = useState<number | null>(null);
 
   // Timeline auto-play functionality
   const resetTimeout = () => {
     if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current)
+      clearTimeout(timeoutRef.current);
     }
-  }
+  };
 
   const startAutoPlay = () => {
-    setIsAutoPlaying(true)
-    resetTimeout()
+    setIsAutoPlaying(true);
+    resetTimeout();
 
     timeoutRef.current = setTimeout(() => {
-      setActiveStep((prev) => (prev + 1) % journeySteps.length)
-    }, 10000)
-  }
+      setActiveStep((prev) => (prev + 1) % journeySteps.length);
+    }, 10000);
+  };
 
   const stopAutoPlay = () => {
-    setIsAutoPlaying(false)
-    resetTimeout()
-  }
+    setIsAutoPlaying(false);
+    resetTimeout();
+  };
 
   const handleStepClick = (index: number) => {
-    setActiveStep(index)
-    stopAutoPlay()
-  }
+    setActiveStep(index);
+    stopAutoPlay();
+  };
 
   useEffect(() => {
-    startAutoPlay()
-    return () => resetTimeout()
-  }, [activeStep])
+    startAutoPlay();
+    return () => resetTimeout();
+  }, [activeStep]);
 
   // Mouse follow effect for hero section
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      if (!heroRef.current) return
+      if (!heroRef.current) return;
 
-      const { clientX, clientY } = e
-      const { width, height } = heroRef.current.getBoundingClientRect()
+      const { clientX, clientY } = e;
+      const { width, height } = heroRef.current.getBoundingClientRect();
 
-      const x = clientX / width
-      const y = clientY / height
+      const x = clientX / width;
+      const y = clientY / height;
 
-      heroRef.current.style.setProperty("--mouse-x", x.toString())
-      heroRef.current.style.setProperty("--mouse-y", y.toString())
-    }
+      heroRef.current.style.setProperty("--mouse-x", x.toString());
+      heroRef.current.style.setProperty("--mouse-y", y.toString());
+    };
 
-    window.addEventListener("mousemove", handleMouseMove)
+    window.addEventListener("mousemove", handleMouseMove);
 
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove)
-    }
-  }, [])
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col bg-cream">
@@ -195,7 +212,10 @@ export default function AboutPage() {
           {/* Grid pattern background */}
           <div className="absolute inset-0 grid-pattern opacity-70 pointer-events-none"></div>
 
-          <motion.div className="container-xl relative z-10" style={{ y, opacity }}>
+          <motion.div
+            className="container-xl relative z-10"
+            style={{ y, opacity }}
+          >
             <div className="max-w-3xl">
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
@@ -212,7 +232,8 @@ export default function AboutPage() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-xl text-neutral-600 mb-8"
               >
-                We're redefining the future of chemical and process engineering with advanced AI solutions.
+                We're redefining the future of chemical and process engineering
+                with advanced AI solutions.
               </motion.p>
 
               <motion.div
@@ -224,11 +245,11 @@ export default function AboutPage() {
                   href="#our-story"
                   className="button-primary group hover-lift"
                   onClick={(e) => {
-                    e.preventDefault()
+                    e.preventDefault();
                     document.querySelector("#our-story")?.scrollIntoView({
                       behavior: "smooth",
                       block: "start",
-                    })
+                    });
                   }}
                 >
                   Discover Our Story
@@ -244,7 +265,11 @@ export default function AboutPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 1 }}
-            onClick={() => document.getElementById("our-story")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() =>
+              document
+                .getElementById("our-story")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
           >
             <ChevronDown className="w-6 h-6 text-slate-600 animate-bounce" />
           </motion.div>
@@ -261,16 +286,21 @@ export default function AboutPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
               <ScrollReveal>
-                <div className="space-y-6">
+                <div className="space-y-6" style={{ textAlign: "justify" }}>
                   <p className="text-lg text-neutral-600">
-                    At Nordlys Tech, we are developing Solvi, an advanced AI-driven eco-system that is redefining the
-                    future of chemical and process engineering. Our platform revolutionizes how engineers access and
-                    apply specialized knowledge.
+                    At Nordlys Tech, we're developing Solvi, an AI-driven
+                    ecosystem that's transforming chemical and process
+                    engineering. Our platform reimagines how engineers access
+                    and utilize specialized knowledge with artificial
+                    intelligence. This is just the beginning of our long-term
+                    commitment to pioneering, Safe, Reliable, Cutting-Edge AI
+                    Solutions including foundation models for the industry.
                   </p>
                   <p className="text-lg text-neutral-600">
-                    We are a diverse Oslo-based startup, comprised of four young engineers with strong backgrounds in
-                    theoretical mathematics and physics, providing a solid foundation for our work in developing
-                    cutting-edge AI solutions.
+                    We're a diverse Oslo-based startup founded by four young
+                    engineers with ambitious goals. Our team is guided by some
+                    of the most qualified advisors in the AI and energy sectors
+                    across Scandinavia and worldwide.
                   </p>
                 </div>
               </ScrollReveal>
@@ -279,16 +309,16 @@ export default function AboutPage() {
                 <LaserFrame className="h-[400px] w-full">
                   <div className="relative h-full w-full overflow-hidden rounded-xl">
                     <Image
-                      src="/placeholder.svg?height=800&width=600"
+                      src="/nordlys-logo-black.png?height=800&width=600"
                       alt="Nordlys Tech Team"
                       fill
                       className="object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                    <div className="absolute bottom-0 left-0 p-6 text-white">
-                      <h3 className="text-2xl font-medium mb-2">The Nordlys Team</h3>
-                      <p>Combining expertise in AI and chemical engineering</p>
-                    </div>
+                    <div
+                      className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                      style={{ background: "border-box" }}
+                    ></div>
+                    <div className="absolute bottom-0 left-0 p-6 text-white"></div>
                   </div>
                 </LaserFrame>
               </ScrollReveal>
@@ -308,7 +338,11 @@ export default function AboutPage() {
             <div className="max-w-4xl mx-auto">
               <div className="space-y-16">
                 {journeySteps.map((step, index) => (
-                  <div key={index} className="relative pl-8 cursor-pointer" onClick={() => handleStepClick(index)}>
+                  <div
+                    key={index}
+                    className="relative pl-8 cursor-pointer"
+                    onClick={() => handleStepClick(index)}
+                  >
                     {/* Vertical line */}
                     <div className="absolute left-0 top-0 bottom-0 w-px bg-neutral-300"></div>
 
@@ -318,7 +352,9 @@ export default function AboutPage() {
                     </h3>
 
                     {/* Step description */}
-                    <p className="text-lg text-neutral-600 mb-6">{step.description}</p>
+                    <p className="text-lg text-neutral-600 mb-6">
+                      {step.description}
+                    </p>
 
                     {/* Step details - with smoother transition */}
                     <div
@@ -326,9 +362,12 @@ export default function AboutPage() {
                       style={{
                         maxHeight: activeStep === index ? "500px" : "0",
                         opacity: activeStep === index ? 1 : 0,
+                        textAlign: "justify",
+                        textJustify: "inter-word",
+                        hyphens: "auto",
                       }}
                     >
-                      <p className="text-neutral-600">{step.details}</p>
+                      <p className="text-neutral-600" style={{"whiteSpace": "pre-line"}}>{step.details}</p>
                     </div>
                   </div>
                 ))}
@@ -336,7 +375,9 @@ export default function AboutPage() {
 
               <div className="flex justify-between items-center mt-12 pl-8">
                 <button
-                  onClick={() => (isAutoPlaying ? stopAutoPlay() : startAutoPlay())}
+                  onClick={() =>
+                    isAutoPlaying ? stopAutoPlay() : startAutoPlay()
+                  }
                   className="text-neutral-500 hover:text-neutral-900 transition-colors duration-300"
                 >
                   {isAutoPlaying ? "Pause" : "Play"}
@@ -344,8 +385,8 @@ export default function AboutPage() {
 
                 <button
                   onClick={() => {
-                    setActiveStep((prev) => (prev + 1) % journeySteps.length)
-                    stopAutoPlay()
+                    setActiveStep((prev) => (prev + 1) % journeySteps.length);
+                    stopAutoPlay();
                   }}
                   className="flex items-center text-neutral-900 hover:text-neutral-700 transition-colors duration-300 group"
                 >
@@ -387,8 +428,17 @@ export default function AboutPage() {
                           transition: "all 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
                         }}
                       >
-                        <div className="pt-2">
-                          <p className="text-neutral-600">{value.description}</p>
+                        <div
+                          className="pt-2"
+                          style={{
+                            textAlign: "justify",
+                            textJustify: "inter-word",
+                            hyphens: "auto",
+                          }}
+                        >
+                          <p className="text-neutral-600">
+                            {value.description}
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -414,7 +464,9 @@ export default function AboutPage() {
                   <div className="mb-8 border-b border-neutral-200 pb-8 last:border-b-0 last:pb-0">
                     <button
                       className="w-full flex justify-between items-center text-left group"
-                      onClick={() => setExpandedFaq(expandedFaq === index ? null : index)}
+                      onClick={() =>
+                        setExpandedFaq(expandedFaq === index ? null : index)
+                      }
                     >
                       <h3 className="text-2xl font-light text-neutral-900 group-hover:text-neutral-700 transition-colors">
                         {faq.question}
@@ -434,9 +486,14 @@ export default function AboutPage() {
                         maxHeight: expandedFaq === index ? "200px" : "0px",
                         opacity: expandedFaq === index ? 1 : 0,
                         marginTop: expandedFaq === index ? "16px" : "0px",
+                        textAlign: "justify",
+                        textJustify: "inter-word",
+                        hyphens: "auto",
                       }}
                     >
-                      <p className="text-neutral-600 leading-relaxed">{faq.answer}</p>
+                      <p className="text-neutral-600 leading-relaxed">
+                        {faq.answer}
+                      </p>
                     </div>
                   </div>
                 </ScrollReveal>
@@ -445,86 +502,10 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* CTA Section - Wider blue background */}
-        <section className="py-24 bg-cream">
-          <div className="w-full max-w-[95%] mx-auto">
-            <ScrollReveal>
-              <div className="relative bg-blue-50 p-16 md:p-24 lg:p-32 overflow-hidden">
-                {/* Decorative Elements */}
-                <DecorativeElement className="top-0 right-0 opacity-10" />
-
-                {/* Moroccan Tile Pattern */}
-                <div className="absolute bottom-0 left-0 opacity-10">
-                  <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0H50V50H0V0Z" fill="black" />
-                    <path d="M50 0H100V50H50V0Z" fill="black" />
-                    <path d="M100 0H150V50H100V0Z" fill="black" />
-                    <path d="M150 0H200V50H150V0Z" fill="black" />
-                    <path d="M0 50H50V100H0V50Z" fill="black" />
-                    <path d="M50 50H100V100H50V50Z" fill="white" />
-                    <path d="M100 50H150V100H100V50Z" fill="white" />
-                    <path d="M150 50H200V100H150V50Z" fill="black" />
-                    <path d="M0 100H50V150H0V100Z" fill="black" />
-                    <path d="M50 100H100V150H50V100Z" fill="white" />
-                    <path d="M100 100H150V150H100V100Z" fill="white" />
-                    <path d="M150 100H200V150H150V100Z" fill="black" />
-                    <path d="M0 150H50V200H0V150Z" fill="black" />
-                    <path d="M50 150H100V200H50V150Z" fill="black" />
-                    <path d="M100 150H150V200H100V150Z" fill="black" />
-                    <path d="M150 150H200V200H150V150Z" fill="black" />
-                  </svg>
-                </div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
-                  viewport={{ once: true }}
-                  className="flex flex-col md:flex-row md:items-center md:justify-between relative z-10"
-                >
-                  <div className="md:max-w-4xl text-left">
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-light tracking-tight text-slate-900 mb-6">
-                      Ready to transform your engineering workflow.
-                      <br />
-                      <span className="font-medium">Work will never be the same.</span>
-                    </h2>
-                  </div>
-
-                  <div className="mt-8 md:mt-0">
-                    <button
-                      onClick={() => setShowContact(true)}
-                      className="inline-flex items-center justify-center px-8 py-4 bg-slate-900 text-white font-medium rounded-none hover:bg-slate-800 transition-all duration-300 group"
-                    >
-                      Get in Touch
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </button>
-                  </div>
-                </motion.div>
-              </div>
-
-              {/* Sliding Contact Form */}
-              <AnimatePresence>
-                {showContact && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.5, ease: "easeInOut" }}
-                    className="overflow-hidden bg-cream"
-                  >
-                    <div className="pt-8 max-w-4xl mx-auto">
-                      <Contact />
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </ScrollReveal>
-          </div>
-        </section>
+        <PremiumCta />
       </main>
 
       <Footer />
     </div>
-  )
+  );
 }
-

@@ -24,10 +24,10 @@ export function LaserFrame({ className = "", children }: LaserFrameProps) {
 
     // Define gradient colors
     const gradients = [
-      "linear-gradient(90deg, transparent, #60A5FA, #818CF8, #34D399, transparent)", // Horizontal (blue-purple-green)
-      "linear-gradient(90deg, transparent, #818CF8, #C084FC, #60A5FA, transparent)", // Horizontal (purple-pink-blue)
-      "linear-gradient(180deg, transparent, #60A5FA, #818CF8, #34D399, transparent)", // Vertical (blue-purple-green)
-      "linear-gradient(180deg, transparent, #818CF8, #C084FC, #60A5FA, transparent)", // Vertical (purple-pink-blue)
+      "linear-gradient(90deg, transparent, #FFFFFF, #FFFFFF, #FFFFFF, transparent)", // Horizontal (blue-purple-green)
+      "linear-gradient(90deg, transparent, #FFFFFF, #FFFFFF, #FFFFFF, transparent)", // Horizontal (purple-pink-blue)
+      "linear-gradient(180deg, transparent, #FFFFFF, #FFFFFF, #FFFFFF, transparent)", // Vertical (blue-purple-green)
+      "linear-gradient(180deg, transparent, #FFFFFF, #FFFFFF, #FFFFFF, transparent)", // Vertical (purple-pink-blue)
     ]
 
     beams.forEach((beam, index) => {

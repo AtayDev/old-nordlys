@@ -19,7 +19,7 @@ export function PremiumCta() {
   const [showContact, setShowContact] = useState(false)
 
   return (
-    <section className="py-32 bg-cream">
+    <section id="premiumCta" className="py-32 bg-cream">
       <div className="max-w-[95%] mx-auto">
         <div className="relative bg-blue-50 p-24 overflow-hidden">
           {/* Decorative Elements */}

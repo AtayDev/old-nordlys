@@ -35,6 +35,19 @@ const screenshots = [
       "Safety & Risk Expert",
     ],
   },
+  {
+    id: 4,
+    title: "AI Engineer Collaboration",
+    description: "Your AI Co-Engineers provide expert assistance, Get targeted analysis, recommendations, and deep domain expertise in seconds.",
+    image:
+      "know-4.png",
+    features: [
+      "In-depth reports",
+      "Troubleshooting",
+      "What-if Analysis",
+      "Process Design",
+    ],
+  }
 ]
 
 export function WorkflowShowcase() {

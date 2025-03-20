@@ -71,7 +71,7 @@ export function Hero() {
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
 
-            <Link href="#about" className="button-outline">
+            <Link href="/about" className="button-outline">
               Learn More
             </Link>
           </div>
