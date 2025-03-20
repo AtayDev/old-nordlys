@@ -88,10 +88,10 @@ export function WorkflowShowcaseLast() {
       <div className="container-xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-6">
-            Experience the <span className="font-medium">Future</span> of Engineering
+            Experience Seamless Engineering Operations with Solvi's <span className="font-medium">Integrated Project Ecosystem</span>
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            See how Solvi transforms complex engineering workflows into streamlined, intelligent processes
+          Navigate your entire engineering workflow in a unified environment. Solvi's Integrated Project Ecosystem brings together projects, documents, and tasks in one comprehensive view, enabling real-time status tracking and intelligent progress monitoring with minimal friction.
           </p>
         </div>
 

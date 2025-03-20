@@ -53,7 +53,7 @@ export function Footer() {
                 <br />
                 Lysaker, 0283 Norway
               </p>
-              <p className="text-sm text-neutral-600">contact@nordlystech.com</p>
+              <p className="text-sm text-neutral-600">founders@nordlystech.com</p>
             </address>
           </div>
         </div>

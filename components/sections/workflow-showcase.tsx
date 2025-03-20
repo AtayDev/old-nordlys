@@ -100,12 +100,13 @@ export function WorkflowShowcase() {
   return (
     <section id="workflow" className="py-24 bg-cream overflow-hidden">
       <div className="container-xl">
+        
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-6">
-            Experience the <span className="font-medium">Future</span> of Engineering
+            Meet Solvi’s <span className="font-medium">Knowledge AI Co-Engineers</span> 
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            See how Solvi transforms complex engineering workflows into streamlined, intelligent processes
+            These AI systems are designed to provide engineers with in-depth, targeted, and accurate domain knowledge empowered by Solvi’s proprietary reasoning models.
           </p>
         </div>
 

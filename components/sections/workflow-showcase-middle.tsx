@@ -89,10 +89,10 @@ export function WorkflowShowcaseMiddle() {
       <div className="container-xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-6">
-            Experience the <span className="font-medium">Future</span> of Engineering
+            Get industry Grade Documentation Drafts with Solvi’s <span className="font-medium">Action AI Co-Engineers</span>
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            See how Solvi transforms complex engineering workflows into streamlined, intelligent processes
+            Cut hours of manual drafting with Solvi’s purpose-built AI systems, trained on defined engineering workflows to perform and aid with domain-specific tasks and documentation drafting (HAZID, SRS, Instrument List, etc.).
           </p>
         </div>
 

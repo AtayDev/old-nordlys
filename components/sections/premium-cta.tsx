@@ -67,7 +67,7 @@ export function PremiumCta() {
                 onClick={() => setShowContact(true)}
                 className="inline-flex items-center justify-center px-8 py-4 bg-slate-900 text-white font-medium rounded-none hover:bg-slate-800 transition-all duration-300 group"
               >
-                Request a demo
+                Request Early Access
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </button>
             </div>
