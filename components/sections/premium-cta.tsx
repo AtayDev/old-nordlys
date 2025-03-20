@@ -56,9 +56,9 @@ export function PremiumCta() {
           >
             <div className="md:max-w-3xl text-left">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-slate-900 mb-6">
-                Meet a collaborative AI for chemical engineers.
+                Ready to Experience the Future of Engineering?
                 <br />
-                <span className="font-medium">Work will never be the same.</span>
+                <span className="font-medium">Join Solvi's waitlist to be among the first to gain early access to our beta version. </span>
               </h2>
             </div>
 

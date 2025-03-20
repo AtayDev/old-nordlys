@@ -73,17 +73,17 @@ const values = [
   {
     title: "Innovation",
     description:
-      "Pushing the boundaries of what's possible with AI in engineering. We constantly explore new technologies and methodologies to create solutions that were previously unimaginable.",
+      "Pushing the boundaries of what's possible with AI in engineering. We constantly explore new technologies to create innovative solutions. Our vision targets building Safe, Reliable, Cutting-Edge AI for the Industry.",
   },
   {
     title: "Expertise",
     description:
-      "Deep domain knowledge in chemical and process engineering. Our team combines specialized engineering knowledge with cutting-edge AI expertise to create truly intelligent solutions.",
+      "Our team combines specialized engineering knowledge with frontier AI expertise, blending technical insight from both worlds to build systems that understand engineering challenges and solve them with precision and efficiency.",
   },
   {
     title: "Safety",
     description:
-      "Commitment to safe and explainable AI solutions. We design our AI systems with robust guardrails, ensuring reliable, accurate outputs through safe and explainable reasoning.",
+      "Commitment to safe and explainable AI solutions. We design our AI systems with robust industry-specific guardrails, ensuring reliable, accurate outputs through safe and explainable reasoning.",
   },
   {
     title: "Collaboration",
