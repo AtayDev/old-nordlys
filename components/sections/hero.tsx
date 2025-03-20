@@ -60,9 +60,8 @@ export function Hero() {
             Advanced AI for Chemical Engineering
           </h2>
 
-          <p className="text-xl text-neutral-600 mb-12 max-w-2xl">
-            Solvi is an AI-driven ecosystem that empowers chemical and process engineers with specialized knowledge and
-            intelligent solutions.
+          <p className="text-xl text-neutral-600 mb-12 max-w-2xl" style={{"textAlign":"justify"}}>
+            Solvi is a first of a kind AI-driven ecosystem transforming chemical engineering by augmenting workflows through safe, reliable, and tailored industrial AI solutions.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6">

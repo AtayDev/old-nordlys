@@ -52,25 +52,20 @@ const journeySteps = [
 // FAQ data
 const faqs = [
   {
-    question: "What is Nordlys Tech?",
+    question: "Why can't I just use a general-purpose LLM for my process and chemical engineering tasks?",
     answer:
-      "Nordlys Tech is an Oslo-based startup developing Solvi, an advanced AI-driven ecosystem that is redefining the future of chemical and process engineering. Our platform revolutionizes how engineers access and apply specialized knowledge.",
+      "General LLMs lack the specialized vocabulary and technical understanding crucial for process and chemical engineering applications. They frequently misinterpret industry-specific terminology and fail to grasp complex process relationships. Solvi's domain-adapted models are built specifically for chemical engineering contexts, ensuring technically accurate outputs that address your precise industrial challenges.",
   },
   {
-    question: "Who is on the team?",
+    question: "What makes Solvi's approach to LLM customization unique?",
     answer:
-      "Our diverse team consists of four young engineers, including two AI and Software Engineers, and two Process and Chemical Engineers. All team members have completed undergraduate programs in theoretical mathematics and physics, providing a strong foundation for our work.",
+      "Solvi employs a proprietary hybrid framework combining fine-tuning, specialized RAG with custom vector embeddings, and advanced prompt engineering—all optimized for process industries. Our models undergo rigorous evaluation against chemical engineering benchmarks to verify technical accuracy. This creates AI co-engineers with deep domain understanding that deliver superior value beyond generic solutions.",
   },
   {
-    question: "What is your approach to AI?",
+    question: "How does Solvi ensure continual improvement of its domain-adapted models?",
     answer:
-      "We focus on developing safe, explainable AI solutions for industrial applications based on high-quality domain-specific data. Our goal is to augment chemical & process engineers' workflow with intelligent tools that understand the complexities of their field.",
-  },
-  {
-    question: "Who guides your journey?",
-    answer:
-      "Our journey is guided by Mr. Olav Grønås Gjerde, one of the Co-Founders of boost.ai, a trailblazer in practical AI applications in Scandinavia. As our senior advisor and mentor, he helps ensure our solutions meet the highest standards of innovation and practicality.",
-  },
+      "Solvi utilizes proprietary data generation pipelines and closed-loop improvement systems specifically designed for process and chemical engineering applications. Our custom RAGAS implementation continuously evaluates model performance against industry-specific metrics, ensuring our systems evolve with emerging technical knowledge while maintaining the highest standards of domain expertise.",
+  }
 ];
 
 // Values data

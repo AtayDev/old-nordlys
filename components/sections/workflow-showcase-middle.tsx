@@ -85,7 +85,7 @@ export function WorkflowShowcaseMiddle() {
   }, [])
 
   return (
-    <section className="py-24 bg-cream overflow-hidden">
+    <section className="py-24 bg-cream overflow-hidden" style={{"paddingTop":"0px"}}>
       <div className="container-xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-6">
