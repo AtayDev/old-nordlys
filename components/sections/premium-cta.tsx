@@ -55,10 +55,10 @@ export function PremiumCta() {
             className="flex flex-col md:flex-row md:items-center md:justify-between relative z-10"
           >
             <div className="md:max-w-3xl text-left">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-slate-900 mb-6">
+              <h2 className="text-4xl font-light tracking-tight text-slate-900 mb-6">
                 Ready to Experience the Future of Engineering?
                 <br />
-                <span className="font-medium">Join Solvi's waitlist to be among the first to gain early access to our beta version. </span>
+                <span className="font-medium">Join Solvi's waitlist </span>
               </h2>
             </div>
 

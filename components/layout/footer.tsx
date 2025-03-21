@@ -10,7 +10,7 @@ export function Footer() {
             <div className="text-xl font-medium tracking-tight mb-6">
               NORDLYS TECH
             </div>
-            <p className="text-neutral-600 max-w-md">
+            <p className="text-neutral-600 max-w-md" style={{"textAlign":"justify"}}>
               Precision-engineered AI solutions for the chemical and process
               engineering industry. We transform complex engineering challenges
               into streamlined, intelligent solutions.

@@ -43,9 +43,9 @@ const journeySteps = [
     id: "launch",
     title: "Launch",
     description:
-      "Now we're here, with Solvi almost ready to launch in beta! Our platform will streamline key engineering workflows through intuitive AI Co-Engineering, eliminating repetitive tasks and unlocking new levels of efficiency.",
-    details:
       "We can't wait to bring the power of Solvi to engineers all over the globe, transforming how technical teams collaborate, innovate, and solve complex problems in their daily work.",
+    details:
+      "Now we're here, with Solvi almost ready to launch in beta! Our platform will streamline key engineering workflows through intuitive AI Co-Engineering, eliminating repetitive tasks and unlocking new levels of efficiency.",
   },
 ];
 
@@ -54,17 +54,22 @@ const faqs = [
   {
     question: "Why can't I just use a general-purpose LLM for my process and chemical engineering tasks?",
     answer:
-      "General LLMs lack the specialized vocabulary and technical understanding crucial for process and chemical engineering applications. They frequently misinterpret industry-specific terminology and fail to grasp complex process relationships. Solvi's domain-adapted models are built specifically for chemical engineering contexts, ensuring technically accurate outputs that address your precise industrial challenges.",
+      "General LLMs lack the specialized vocabulary and technical understanding crucial for process and chemical engineering applications. They frequently misinterpret industry-specific terminology, generate inaccurate and unsound outputs, and fail to grasp complex process relationships. Solvi's domain-adapted models are built specifically for chemical engineering contexts, ensuring technically accurate outputs that address your precise industrial challenges.",
   },
   {
-    question: "What makes Solvi's approach to LLM customization unique?",
+    question: "What is your approach to AI?",
     answer:
-      "Solvi employs a proprietary hybrid framework combining fine-tuning, specialized RAG with custom vector embeddings, and advanced prompt engineering—all optimized for process industries. Our models undergo rigorous evaluation against chemical engineering benchmarks to verify technical accuracy. This creates AI co-engineers with deep domain understanding that deliver superior value beyond generic solutions.",
+      "Solvi employs a proprietary hybrid framework combining fine-tuning, specialized RAG with custom vector embeddings, and advanced reasoning, all designed through a rule-based approach for process industries. Our models undergo rigorous evaluation against in-house chemical engineering benchmarks to verify technical accuracy. This creates AI co-engineers with deep domain understanding that deliver superior value beyond generic solutions.",
   },
   {
-    question: "How does Solvi ensure continual improvement of its domain-adapted models?",
+    question: "How does Nordlys Tech ensure continual improvement of its domain-adapted models?",
     answer:
-      "Solvi utilizes proprietary data generation pipelines and closed-loop improvement systems specifically designed for process and chemical engineering applications. Our custom RAGAS implementation continuously evaluates model performance against industry-specific metrics, ensuring our systems evolve with emerging technical knowledge while maintaining the highest standards of domain expertise.",
+      "We are continuously optimizing and creating new solutions through streamlined data mining, processing, and proprietary data generation pipelines, alongside closed-loop improvement systems specifically for process and chemical engineering applications.",
+  },
+  {
+    question: "How does Nordlys Tech protect my sensitive data and maintain confidentiality?",
+    answer:
+      "Solvi implements enterprise-grade security measures including end-to-end encryption, secure data storage within the European Union, and strict access controls. Your proprietary process data and intellectual property never leave your environment. We follow industry-leading data isolation practices and comply with relevant security standards to ensure your competitive advantage remains protected.",
   }
 ];
 
@@ -78,7 +83,7 @@ const values = [
   {
     title: "Expertise",
     description:
-      "Our team combines specialized engineering knowledge with frontier AI expertise, blending technical insight from both worlds to build systems that understand engineering challenges and solve them with precision and efficiency.",
+      "Our team combines specialized engineering knowledge with frontier AI expertise, blending technical insight from both worlds to build systems that understand engineering challenges and solve them with precision.",
   },
   {
     title: "Safety",

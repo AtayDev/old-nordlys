@@ -53,7 +53,7 @@ export function Hero() {
       <div className="container-xl relative z-10">
         <div className="max-w-3xl fade-in">
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-light tracking-tight mb-8">
-            Introducing Solvi <span className="text-4xl md:text-5xl align-super" style={{marginLeft:"-22px"}}>®</span>
+            Introducing Solvi
           </h1>
 
           <h2 className="text-3xl md:text-4xl font-light text-neutral-800 mb-6">
@@ -65,7 +65,7 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6">
-            <Link href="#contact" className="button-primary group">
+            <Link href="#premiumCta" className="button-primary group">
               Request Early Access
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>

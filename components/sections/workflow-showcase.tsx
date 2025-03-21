@@ -105,8 +105,8 @@ export function WorkflowShowcase() {
           <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-6">
             Meet Solvi’s <span className="font-medium">Knowledge AI Co-Engineers</span> 
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            These AI systems are designed to provide engineers with in-depth, targeted, and accurate domain knowledge empowered by Solvi’s proprietary reasoning models.
+          <p className="text-lg text-slate-600 mx-auto">
+            These AI systems are designed to provide engineers with in-depth, targeted, and accurate domain knowledge empowered by Solvi’s proprietary reasoning models
           </p>
         </div>
 
