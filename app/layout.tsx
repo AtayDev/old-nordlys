@@ -11,7 +11,8 @@ const inter = Inter({
 export const metadata = {
   title: "Nordlys Tech - AI Solutions for Chemical Engineering",
   description: "Precision-engineered AI solutions for the chemical and process engineering industry",
-    generator: 'v0.dev'
+  icons:"/nordlys-favicon.png"
+  
 }
 
 export default function RootLayout({
@@ -29,3 +30,4 @@ export default function RootLayout({
 
 
 import './globals.css'
+import { icons } from "lucide-react"

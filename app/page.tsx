@@ -1,5 +1,5 @@
 "use client"
-
+import Head from "next/head"
 import { useState, useEffect } from "react"
 import { Navigation } from "@/components/layout/navigation"
 import { Footer } from "@/components/layout/footer"
@@ -24,6 +24,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      <Head>
+       <link rel="icon" type="image/png" href="/nordlys-favicon.png" />
+      </Head>
       <Navigation />
 
       <main className="flex-1">
